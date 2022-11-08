@@ -110,8 +110,13 @@ const bikes = [
     },
 ];
 
+
+
 const minWeight = Math.min(...bikes.map(bike => bike.weight));
 console.log(minWeight);
+
+
+
 
 document.getElementById('weightSentence').innerHTML = `<h2>The lightest bike we have in stocks weighs ${minWeight} kilograms.</h2>`
 
@@ -131,8 +136,36 @@ const teams = [
         foulsReceived: 0,
     },
     {
+        teamName: 'gothamFC',
+        points: 0,
+        foulsReceived: 0,
+    },
+    {
+        teamName: 'squadraForte',
+        points: 0,
+        foulsReceived: 0,
+    },
+    {
+        teamName: 'squadraScarsa',
+        points: 0,
+        foulsReceived: 0,
+    },
+    {
         teamName: 'unaltronome',
         points: 0,
         foulsReceived: 0,
     },
 ]
+
+teams.forEach((element) => {
+    element.points = Math.floor(Math.random()*100);
+    element.foulsReceived = Math.floor(Math.random()*50);
+})
+console.log(teams);
+
+teams.forEach(({teamName, foulsReceived}) => {
+    console.log(teamName, foulsReceived);
+})
+
+
+
