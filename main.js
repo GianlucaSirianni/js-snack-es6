@@ -60,25 +60,79 @@ let students = [
     { name: 'Luigi', id: 196, grades: 68 },
     { name: 'Piero', id: 102, grades: 50 },
     { name: 'Francesca', id: 120, grades: 84 },
-  ];
+];
 
 
-  students.forEach((element) => {
+students.forEach((element) => {
     console.log(element.name.toUpperCase())
-  })
+})
 
 
-const worthyStudents = students.filter((element) =>{
-    if (element.grades > 70){
+const worthyStudents = students.filter((element) => {
+    if (element.grades > 70) {
         return true;
     }
 })
 console.log(worthyStudents);
 
-const worthyAndHighStudents = students.filter((element) =>{
-    if ((element.grades > 70) && (element.id > 120)){
+const worthyAndHighStudents = students.filter((element) => {
+    if ((element.grades > 70) && (element.id > 120)) {
         return true;
     }
 })
 
 console.log(worthyAndHighStudents);
+
+
+// Creare un array di oggetti: Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
+
+
+const bikes = [
+    {
+        name: 'bici1',
+        weight: 13,
+    },
+    {
+        name: 'bici2',
+        weight: 25,
+    },
+    {
+        name: 'bici3',
+        weight: 36,
+    },
+    {
+        name: 'bici4',
+        weight: 47,
+    },
+    {
+        name: 'bici5',
+        weight: 58,
+    },
+];
+
+const minWeight = Math.min(...bikes.map(bike => bike.weight));
+console.log(minWeight);
+
+document.getElementById('weightSentence').innerHTML = `<h2>The lightest bike we have in stocks weighs ${minWeight} kilograms.</h2>`
+
+
+// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+const teams = [
+    {
+        teamName: 'paperopoli',
+        points: 0,
+        foulsReceived: 0,
+    },
+    {
+        teamName: 'topolinia',
+        points: 0,
+        foulsReceived: 0,
+    },
+    {
+        teamName: 'unaltronome',
+        points: 0,
+        foulsReceived: 0,
+    },
+]
